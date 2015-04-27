@@ -71,6 +71,9 @@ Func UpgradeWall()
 				Click(472, 482) ; Click Okay
 				SetLog("Upgrading Done !!!", $COLOR_BLUE) ; Done upgrade
 				GUICtrlSetData($lblwallupgradecount, GUICtrlRead($lblwallupgradecount)+ 1)
+				; My custom edit
+				SetLog("Number of Walls Upgraded: " & GUICtrlRead($lblwallupgradecount), $COLOR_BLUE) ; Display number of walls upgraded
+				; End My custom edit
 				If _Sleep(1000) Then ExitLoop
 				ClickP($TopLeftClient) ; Click away
 				If _Sleep(1000) Then ExitLoop
@@ -117,6 +120,9 @@ Func UpgradeWall()
 				Click(472, 482) ; Click Okay
 				SetLog("Upgrading Done !!!", $COLOR_BLUE) ; Done upgrade
 				GUICtrlSetData($lblwallupgradecount, GUICtrlRead($lblwallupgradecount)+ 1)
+				; My custom edit
+				SetLog("Number of Walls Upgraded: " & GUICtrlRead($lblwallupgradecount), $COLOR_BLUE) ; Display number of walls upgraded
+				; End My custom edit
 				If _Sleep(1000) Then ExitLoop
 				ClickP($TopLeftClient) ; Click away
 				If _Sleep(1000) Then ExitLoop
