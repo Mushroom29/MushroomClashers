@@ -1,0 +1,568 @@
+2015-04-16 18:52:22 : ~~~~Welcome to AutoIt ClashBot v6.0!~~~~
+2015-04-16 18:52:22 : Executable running on X64 OS
+2015-04-16 18:52:22 : Bot is starting...
+2015-04-16 18:52:23 : Trying to locate Main Screen
+2015-04-16 18:52:23 : Main Screen Located
+2015-04-16 18:52:27 : Village Report
+2015-04-16 18:52:27 : Num. of Free Builders: 2
+2015-04-16 18:52:27 : Opening Builder page to read Resources..
+2015-04-16 18:52:28 : Resources: [G]: 399292 [E]: 2599147 [D]: 57273 [GEM]: 116
+2015-04-16 18:52:31 : Checking if Village needs Rearming..
+2015-04-16 18:52:39 : Donating Troops
+2015-04-16 18:52:39 : No new chats, skip donating
+2015-04-16 18:52:41 : Checking Army Camp...
+2015-04-16 18:52:43 : Total Troop Capacity: 167/200
+2015-04-16 18:52:43 : - Archers 110
+2015-04-16 18:52:43 : - Barbarians 57
+2015-04-16 18:52:46 : Training Troops...
+2015-04-16 18:52:49 : ====== Barrack 1 : ======
+2015-04-16 18:52:53 : Barrack 1 Training Barbarian : 12
+2015-04-16 18:52:53 : Barbarian Remaining : 36
+2015-04-16 18:52:53 : Total troop capacity training : 12
+2015-04-16 18:52:57 : ====== Barrack 2 : ======
+2015-04-16 18:53:01 : Barrack 2 Training Barbarian : 12
+2015-04-16 18:53:01 : Barbarian Remaining : 24
+2015-04-16 18:53:01 : Total troop capacity training : 24
+2015-04-16 18:53:05 : ====== Barrack 3 : ======
+2015-04-16 18:53:09 : Barrack 3 Training Barbarian : 12
+2015-04-16 18:53:09 : Barbarian Remaining : 12
+2015-04-16 18:53:09 : Total troop capacity training : 36
+2015-04-16 18:53:12 : ====== Barrack 4 : ======
+2015-04-16 18:53:17 : Barrack 4 Training Barbarian : 12
+2015-04-16 18:53:17 : Barbarian Remaining : 0
+2015-04-16 18:53:17 : Total troop capacity training : 48
+2015-04-16 18:53:18 : Training Troops Complete...
+2015-04-16 18:53:23 : Requesting for Clan Castle's Troops
+2015-04-16 18:53:28 : Collecting Resources
+2015-04-16 18:53:37 : Attempting upgrade of walls...
+2015-04-16 18:53:38 : Gold is lower than Minimum setting for upgrade...
+2015-04-16 18:53:39 : Village Report
+2015-04-16 18:53:39 : Num. of Free Builders: 2
+2015-04-16 18:53:40 : Opening Builder page to read Resources..
+2015-04-16 18:53:41 : Resources: [G]: 399292 [E]: 2598847 [D]: 57275 [GEM]: 116
+2015-04-16 18:53:41 : Attempting to upgrade Building 1...
+2015-04-16 18:53:46 : Not enough Gold to upgrade, skip upgrading...
+2015-04-16 18:53:46 : Village Report
+2015-04-16 18:53:46 : Num. of Free Builders: 2
+2015-04-16 18:53:46 : Opening Builder page to read Resources..
+2015-04-16 18:53:47 : Resources: [G]: 399292 [E]: 2598847 [D]: 57275 [GEM]: 116
+2015-04-16 18:53:53 : ~~~Waiting for full army~~~
+2015-04-16 18:54:23 : Trying to locate Main Screen
+2015-04-16 18:54:23 : Main Screen Located
+2015-04-16 18:54:25 : Checking Army Camp...
+2015-04-16 18:54:28 : Total Troop Capacity: 185/200
+2015-04-16 18:54:28 : - Archers 110
+2015-04-16 18:54:28 : - Barbarians 7
+2015-04-16 18:54:29 : Training Troops...
+2015-04-16 18:54:32 : ====== Barrack 1 : ======
+2015-04-16 18:54:34 : Total troop capacity training : 48
+2015-04-16 18:54:38 : ====== Barrack 2 : ======
+2015-04-16 18:54:40 : Total troop capacity training : 48
+2015-04-16 18:54:43 : ====== Barrack 3 : ======
+2015-04-16 18:54:45 : Total troop capacity training : 48
+2015-04-16 18:54:49 : ====== Barrack 4 : ======
+2015-04-16 18:54:51 : Total troop capacity training : 48
+2015-04-16 18:54:51 : Training Troops Complete...
+2015-04-16 18:54:55 : Donating Troops
+2015-04-16 18:54:57 : Chat Text: any
+2015-04-16 18:54:58 : Donating Barbarians
+2015-04-16 18:55:02 : Chat Text: thank you
+2015-04-16 18:55:05 : Finished Donating
+2015-04-16 18:55:05 : Time Idle: 0 hours 1 minutes 11 seconds
+2015-04-16 18:55:05 : ~~~Waiting for full army~~~
+2015-04-16 18:55:35 : Trying to locate Main Screen
+2015-04-16 18:55:35 : Main Screen Located
+2015-04-16 18:55:37 : Checking Army Camp...
+2015-04-16 18:55:40 : Total Troop Capacity: 194/200
+2015-04-16 18:55:40 : - Archers 110
+2015-04-16 18:55:40 : - Barbarians 84
+2015-04-16 18:55:41 : Training Troops...
+2015-04-16 18:55:44 : ====== Barrack 1 : ======
+2015-04-16 18:55:46 : Barrack 1 Training Barbarian : 1
+2015-04-16 18:55:46 : Barbarian Remaining : 4
+2015-04-16 18:55:46 : Total troop capacity training : 49
+2015-04-16 18:55:50 : ====== Barrack 2 : ======
+2015-04-16 18:55:52 : Barrack 2 Training Barbarian : 1
+2015-04-16 18:55:52 : Barbarian Remaining : 3
+2015-04-16 18:55:52 : Total troop capacity training : 50
+2015-04-16 18:55:55 : ====== Barrack 3 : ======
+2015-04-16 18:55:58 : Barrack 3 Training Barbarian : 1
+2015-04-16 18:55:58 : Barbarian Remaining : 2
+2015-04-16 18:55:58 : Total troop capacity training : 51
+2015-04-16 18:56:01 : ====== Barrack 4 : ======
+2015-04-16 18:56:03 : Barrack 4 Training Barbarian : 1
+2015-04-16 18:56:03 : Barbarian Remaining : 1
+2015-04-16 18:56:03 : Total troop capacity training : 52
+2015-04-16 18:56:04 : Training Troops Complete...
+2015-04-16 18:56:07 : Donating Troops
+2015-04-16 18:56:07 : No new chats, skip donating
+2015-04-16 18:56:07 : Time Idle: 0 hours 2 minutes 14 seconds
+2015-04-16 18:56:07 : ~~~Waiting for full army~~~
+2015-04-16 18:56:37 : Trying to locate Main Screen
+2015-04-16 18:56:37 : Main Screen Located
+2015-04-16 18:56:39 : Checking Army Camp...
+2015-04-16 18:56:42 : Total Troop Capacity: 200/200
+2015-04-16 18:56:42 : Army Camp Full : True
+2015-04-16 18:56:44 : Training Troops...
+2015-04-16 18:56:46 : ====== Barrack 1 : ======
+2015-04-16 18:56:52 : Barrack 1 Training Barbarian : 26
+2015-04-16 18:56:52 : Barbarian Remaining : 79
+2015-04-16 18:56:52 : Barrack 1 Training Archer : 27
+2015-04-16 18:56:52 : Archer Remaining : 82
+2015-04-16 18:56:52 : Total troop capacity training : 53
+2015-04-16 18:56:56 : ====== Barrack 2 : ======
+2015-04-16 18:57:01 : Barrack 2 Training Barbarian : 26
+2015-04-16 18:57:01 : Barbarian Remaining : 53
+2015-04-16 18:57:01 : Barrack 2 Training Archer : 27
+2015-04-16 18:57:01 : Archer Remaining : 55
+2015-04-16 18:57:01 : Total troop capacity training : 106
+2015-04-16 18:57:05 : ====== Barrack 3 : ======
+2015-04-16 18:57:11 : Barrack 3 Training Barbarian : 26
+2015-04-16 18:57:11 : Barbarian Remaining : 27
+2015-04-16 18:57:11 : Barrack 3 Training Archer : 27
+2015-04-16 18:57:11 : Archer Remaining : 28
+2015-04-16 18:57:11 : Total troop capacity training : 159
+2015-04-16 18:57:14 : ====== Barrack 4 : ======
+2015-04-16 18:57:20 : Barrack 4 Training Barbarian : 26
+2015-04-16 18:57:20 : Barbarian Remaining : 1
+2015-04-16 18:57:20 : Barrack 4 Training Archer : 27
+2015-04-16 18:57:20 : Archer Remaining : 1
+2015-04-16 18:57:20 : Total troop capacity training : 212
+2015-04-16 18:57:21 : Training Troops Complete...
+2015-04-16 18:57:25 : Searching...
+2015-04-16 18:57:32 : ~Dead - Gold: 80000; Elixir: 80000; Dark: 0; Trophy: 0; Townhall: 4-6
+2015-04-16 18:57:32 : ~Any  - Gold: 100000; Elixir: 100000; Dark: 0; Trophy: 0; Townhall: 8
+2015-04-16 18:57:34 : (1) [G]: 146030  [E]: 122658  [D]: 783  [T]: 19  [TH]: 8, In, -
+2015-04-16 18:57:35 : ===============Searching Complete===============
+2015-04-16 18:57:36 : Preparing to attack
+2015-04-16 18:57:37 : -Barbarians 90
+2015-04-16 18:57:37 : -Archers 110
+2015-04-16 18:57:37 : -Clan castle 1
+2015-04-16 18:57:37 : -King 1
+2015-04-16 18:57:38 : ======Beginning Attack======
+2015-04-16 18:57:40 : ~Attacking in all sides...
+2015-04-16 18:57:41 : Townhall location (429, 301)
+2015-04-16 18:57:41 : Townhall is in Center of Base. Ignore Attacking Townhall
+2015-04-16 18:57:41 : Dropping first wave of 45 Barbarians
+2015-04-16 18:57:46 : Dropping first wave of 55 Archers
+2015-04-16 18:57:52 : Dropping second wave of 45 Barbarians
+2015-04-16 18:57:55 : Dropping Clan Castle
+2015-04-16 18:57:56 : Dropping second wave of 55 Archers
+2015-04-16 18:58:03 : Dropping King
+2015-04-16 18:58:05 : Dropping left over troops
+2015-04-16 18:58:05 : Checking remaining unlaunched troops
+2015-04-16 18:58:11 : Checking remaining unlaunched troops
+2015-04-16 18:58:17 : Waiting 9 seconds before activating King's abilities
+2015-04-16 18:58:26 : Activate King's power
+2015-04-16 18:58:26 : ~Finished Attacking, waiting to finish
+2015-04-16 18:58:52 : Checking if the battle has finished
+2015-04-16 18:58:52 : Gold & Elixir change detected, waiting...
+2015-04-16 18:59:03 : Checking if the battle has finished
+2015-04-16 18:59:03 : No Income detected, returning in 10 seconds
+2015-04-16 18:59:13 : Returning Home
+2015-04-16 18:59:17 : Taking snapshot of your loot
+2015-04-16 18:59:27 : Trying to locate Main Screen
+2015-04-16 18:59:27 : Main Screen Located
+2015-04-16 18:59:31 : Village Report
+2015-04-16 18:59:31 : Num. of Free Builders: 2
+2015-04-16 18:59:31 : Opening Builder page to read Resources..
+2015-04-16 18:59:32 : Resources: [G]: 425579 [E]: 2607945 [D]: 57314 [GEM]: 116
+2015-04-16 18:59:35 : Donating Troops
+2015-04-16 18:59:35 : No new chats, skip donating
+2015-04-16 18:59:36 : Checking Army Camp...
+2015-04-16 18:59:39 : Total Troop Capacity: 22/200
+2015-04-16 18:59:39 : - Archers 22
+2015-04-16 18:59:42 : Training Troops...
+2015-04-16 18:59:45 : ====== Barrack 1 : ======
+2015-04-16 18:59:51 : Barrack 1 Training Barbarian : 26
+2015-04-16 18:59:51 : Barbarian Remaining : 79
+2015-04-16 18:59:51 : Barrack 1 Training Archer : 21
+2015-04-16 18:59:51 : Archer Remaining : 66
+2015-04-16 18:59:51 : Total troop capacity training : 47
+2015-04-16 18:59:54 : ====== Barrack 2 : ======
+2015-04-16 19:00:00 : Barrack 2 Training Barbarian : 26
+2015-04-16 19:00:00 : Barbarian Remaining : 53
+2015-04-16 19:00:00 : Barrack 2 Training Archer : 21
+2015-04-16 19:00:00 : Archer Remaining : 45
+2015-04-16 19:00:00 : Total troop capacity training : 94
+2015-04-16 19:00:03 : ====== Barrack 3 : ======
+2015-04-16 19:00:09 : Barrack 3 Training Barbarian : 26
+2015-04-16 19:00:09 : Barbarian Remaining : 27
+2015-04-16 19:00:09 : Barrack 3 Training Archer : 21
+2015-04-16 19:00:09 : Archer Remaining : 24
+2015-04-16 19:00:09 : Total troop capacity training : 141
+2015-04-16 19:00:12 : ====== Barrack 4 : ======
+2015-04-16 19:00:18 : Barrack 4 Training Barbarian : 25
+2015-04-16 19:00:18 : Barbarian Remaining : 2
+2015-04-16 19:00:18 : Barrack 4 Training Archer : 21
+2015-04-16 19:00:18 : Archer Remaining : 3
+2015-04-16 19:00:18 : Total troop capacity training : 187
+2015-04-16 19:00:19 : Training Troops Complete...
+2015-04-16 19:00:24 : Requesting for Clan Castle's Troops
+2015-04-16 19:00:27 : Request's already been made
+2015-04-16 19:00:28 : Collecting Resources
+2015-04-16 19:00:37 : Attempting upgrade of walls...
+2015-04-16 19:00:38 : Gold is lower than Minimum setting for upgrade...
+2015-04-16 19:00:39 : Village Report
+2015-04-16 19:00:39 : Num. of Free Builders: 2
+2015-04-16 19:00:39 : Opening Builder page to read Resources..
+2015-04-16 19:00:41 : Resources: [G]: 425579 [E]: 2608045 [D]: 57322 [GEM]: 116
+2015-04-16 19:00:41 : Attempting to upgrade Building 1...
+2015-04-16 19:00:45 : Not enough Gold to upgrade, skip upgrading...
+2015-04-16 19:00:46 : Village Report
+2015-04-16 19:00:46 : Num. of Free Builders: 2
+2015-04-16 19:00:46 : Opening Builder page to read Resources..
+2015-04-16 19:00:47 : Resources: [G]: 425579 [E]: 2608045 [D]: 57322 [GEM]: 116
+2015-04-16 19:00:52 : ~~~Waiting for full army~~~
+2015-04-16 19:01:23 : Trying to locate Main Screen
+2015-04-16 19:01:23 : Main Screen Located
+2015-04-16 19:01:25 : Checking Army Camp...
+2015-04-16 19:01:28 : Total Troop Capacity: 35/200
+2015-04-16 19:01:28 : - Archers 5
+2015-04-16 19:01:29 : Training Troops...
+2015-04-16 19:01:32 : ====== Barrack 1 : ======
+2015-04-16 19:01:34 : Barrack 1 Training Barbarian : 1
+2015-04-16 19:01:34 : Barbarian Remaining : 1
+2015-04-16 19:01:34 : Barrack 1 Training Archer : 1
+2015-04-16 19:01:34 : Archer Remaining : 2
+2015-04-16 19:01:34 : Total troop capacity training : 189
+2015-04-16 19:01:38 : ====== Barrack 2 : ======
+2015-04-16 19:01:40 : Barrack 2 Training Barbarian : 1
+2015-04-16 19:01:40 : Barbarian Remaining : 0
+2015-04-16 19:01:40 : Barrack 2 Training Archer : 1
+2015-04-16 19:01:40 : Archer Remaining : 1
+2015-04-16 19:01:40 : Total troop capacity training : 191
+2015-04-16 19:01:43 : ====== Barrack 3 : ======
+2015-04-16 19:01:45 : Barrack 3 Training Archer : 1
+2015-04-16 19:01:45 : Archer Remaining : 0
+2015-04-16 19:01:45 : Total troop capacity training : 192
+2015-04-16 19:01:49 : ====== Barrack 4 : ======
+2015-04-16 19:01:50 : Total troop capacity training : 192
+2015-04-16 19:01:51 : Training Troops Complete...
+2015-04-16 19:01:54 : Donating Troops
+2015-04-16 19:01:56 : Chat Text: any
+2015-04-16 19:01:57 : No troops available for donation, donating later...
+2015-04-16 19:01:58 : Donating Archers
+2015-04-16 19:02:03 : Chat Text: any
+2015-04-16 19:02:04 : No troops available for donation, donating later...
+2015-04-16 19:02:05 : Donating Archers
+2015-04-16 19:02:09 : Chat Text: thank you
+2015-04-16 19:02:12 : Finished Donating
+2015-04-16 19:02:12 : Time Idle: 0 hours 1 minutes 19 seconds
+2015-04-16 19:02:12 : ~~~Waiting for full army~~~
+2015-04-16 19:02:42 : Trying to locate Main Screen
+2015-04-16 19:02:42 : Main Screen Located
+2015-04-16 19:02:44 : Checking Army Camp...
+2015-04-16 19:02:47 : Total Troop Capacity: 37/200
+2015-04-16 19:02:47 : - Archers 7
+2015-04-16 19:02:48 : Training Troops...
+2015-04-16 19:02:51 : ====== Barrack 1 : ======
+2015-04-16 19:02:53 : Barrack 1 Training Archer : 2
+2015-04-16 19:02:53 : Archer Remaining : 8
+2015-04-16 19:02:53 : Total troop capacity training : 194
+2015-04-16 19:02:56 : ====== Barrack 2 : ======
+2015-04-16 19:02:58 : Barrack 2 Training Archer : 2
+2015-04-16 19:02:58 : Archer Remaining : 6
+2015-04-16 19:02:58 : Total troop capacity training : 196
+2015-04-16 19:03:02 : ====== Barrack 3 : ======
+2015-04-16 19:03:04 : Barrack 3 Training Archer : 2
+2015-04-16 19:03:04 : Archer Remaining : 4
+2015-04-16 19:03:04 : Total troop capacity training : 198
+2015-04-16 19:03:07 : ====== Barrack 4 : ======
+2015-04-16 19:03:09 : Barrack 4 Training Archer : 2
+2015-04-16 19:03:09 : Archer Remaining : 2
+2015-04-16 19:03:09 : Total troop capacity training : 200
+2015-04-16 19:03:10 : Training Troops Complete...
+2015-04-16 19:03:13 : Donating Troops
+2015-04-16 19:03:13 : No new chats, skip donating
+2015-04-16 19:03:13 : Time Idle: 0 hours 2 minutes 20 seconds
+2015-04-16 19:03:13 : ~~~Waiting for full army~~~
+2015-04-16 19:03:43 : Trying to locate Main Screen
+2015-04-16 19:03:43 : Main Screen Located
+2015-04-16 19:03:45 : Checking Army Camp...
+2015-04-16 19:03:48 : Total Troop Capacity: 46/200
+2015-04-16 19:03:48 : - Archers 46
+2015-04-16 19:03:50 : Training Troops...
+2015-04-16 19:03:53 : ====== Barrack 1 : ======
+2015-04-16 19:03:54 : Barrack 1 Training Archer : 1
+2015-04-16 19:03:54 : Archer Remaining : 1
+2015-04-16 19:03:54 : Total troop capacity training : 201
+2015-04-16 19:03:58 : ====== Barrack 2 : ======
+2015-04-16 19:04:00 : Barrack 2 Training Archer : 1
+2015-04-16 19:04:00 : Archer Remaining : 0
+2015-04-16 19:04:00 : Total troop capacity training : 202
+2015-04-16 19:04:03 : ====== Barrack 3 : ======
+2015-04-16 19:04:05 : Total troop capacity training : 202
+2015-04-16 19:04:08 : ====== Barrack 4 : ======
+2015-04-16 19:04:10 : Total troop capacity training : 202
+2015-04-16 19:04:11 : Training Troops Complete...
+2015-04-16 19:04:14 : Donating Troops
+2015-04-16 19:04:14 : No new chats, skip donating
+2015-04-16 19:04:14 : Time Idle: 0 hours 3 minutes 21 seconds
+2015-04-16 19:04:14 : ~~~Waiting for full army~~~
+2015-04-16 19:04:44 : Trying to locate Main Screen
+2015-04-16 19:04:44 : Main Screen Located
+2015-04-16 19:04:46 : Checking Army Camp...
+2015-04-16 19:04:49 : Total Troop Capacity: 56/200
+2015-04-16 19:04:49 : - Archers 56
+2015-04-16 19:04:51 : Training Troops...
+2015-04-16 19:04:54 : ====== Barrack 1 : ======
+2015-04-16 19:04:55 : Total troop capacity training : 202
+2015-04-16 19:04:59 : ====== Barrack 2 : ======
+2015-04-16 19:05:01 : Total troop capacity training : 202
+2015-04-16 19:05:04 : ====== Barrack 3 : ======
+2015-04-16 19:05:06 : Total troop capacity training : 202
+2015-04-16 19:05:09 : ====== Barrack 4 : ======
+2015-04-16 19:05:11 : Total troop capacity training : 202
+2015-04-16 19:05:12 : Training Troops Complete...
+2015-04-16 19:05:15 : Donating Troops
+2015-04-16 19:05:15 : No new chats, skip donating
+2015-04-16 19:05:15 : Time Idle: 0 hours 4 minutes 22 seconds
+2015-04-16 19:05:15 : ~~~Waiting for full army~~~
+2015-04-16 19:05:45 : Trying to locate Main Screen
+2015-04-16 19:05:45 : Main Screen Located
+2015-04-16 19:05:47 : Checking Army Camp...
+2015-04-16 19:05:50 : Total Troop Capacity: 66/200
+2015-04-16 19:05:50 : - Archers 66
+2015-04-16 19:05:52 : Training Troops...
+2015-04-16 19:05:54 : ====== Barrack 1 : ======
+2015-04-16 19:05:56 : Total troop capacity training : 202
+2015-04-16 19:06:00 : ====== Barrack 2 : ======
+2015-04-16 19:06:01 : Total troop capacity training : 202
+2015-04-16 19:06:05 : ====== Barrack 3 : ======
+2015-04-16 19:06:07 : Total troop capacity training : 202
+2015-04-16 19:06:10 : ====== Barrack 4 : ======
+2015-04-16 19:06:12 : Total troop capacity training : 202
+2015-04-16 19:06:13 : Training Troops Complete...
+2015-04-16 19:06:16 : Donating Troops
+2015-04-16 19:06:18 : Chat Text: any
+2015-04-16 19:06:19 : No troops available for donation, donating later...
+2015-04-16 19:06:20 : Donating Archers
+2015-04-16 19:06:25 : Chat Text: lvl 
+thank you
+2015-04-16 19:06:28 : Finished Donating
+2015-04-16 19:06:28 : Time Idle: 0 hours 5 minutes 35 seconds
+2015-04-16 19:06:28 : ~~~Waiting for full army~~~
+2015-04-16 19:06:58 : Trying to locate Main Screen
+2015-04-16 19:06:58 : Main Screen Located
+2015-04-16 19:07:00 : Collecting Resources
+2015-04-16 19:07:09 : Checking Army Camp...
+2015-04-16 19:07:12 : Total Troop Capacity: 73/200
+2015-04-16 19:07:12 : - Archers 73
+2015-04-16 19:07:14 : Training Troops...
+2015-04-16 19:07:17 : ====== Barrack 1 : ======
+2015-04-16 19:07:19 : Total troop capacity training : 202
+2015-04-16 19:07:22 : ====== Barrack 2 : ======
+2015-04-16 19:07:24 : Barrack 2 Training Archer : 1
+2015-04-16 19:07:24 : Archer Remaining : 4
+2015-04-16 19:07:24 : Total troop capacity training : 203
+2015-04-16 19:07:27 : ====== Barrack 3 : ======
+2015-04-16 19:07:29 : Barrack 3 Training Archer : 1
+2015-04-16 19:07:29 : Archer Remaining : 3
+2015-04-16 19:07:29 : Total troop capacity training : 204
+2015-04-16 19:07:33 : ====== Barrack 4 : ======
+2015-04-16 19:07:35 : Barrack 4 Training Archer : 1
+2015-04-16 19:07:35 : Archer Remaining : 2
+2015-04-16 19:07:35 : Total troop capacity training : 205
+2015-04-16 19:07:35 : Training Troops Complete...
+2015-04-16 19:07:39 : Donating Troops
+2015-04-16 19:07:39 : No new chats, skip donating
+2015-04-16 19:07:39 : Time Idle: 0 hours 6 minutes 46 seconds
+2015-04-16 19:07:39 : ~~~Waiting for full army~~~
+2015-04-16 19:08:09 : Trying to locate Main Screen
+2015-04-16 19:08:09 : Main Screen Located
+2015-04-16 19:08:11 : Checking Army Camp...
+2015-04-16 19:08:14 : Total Troop Capacity: 83/200
+2015-04-16 19:08:14 : - Archers 83
+2015-04-16 19:08:16 : Training Troops...
+2015-04-16 19:08:18 : ====== Barrack 1 : ======
+2015-04-16 19:08:20 : Barrack 1 Training Archer : 1
+2015-04-16 19:08:20 : Archer Remaining : 1
+2015-04-16 19:08:20 : Total troop capacity training : 206
+2015-04-16 19:08:24 : ====== Barrack 2 : ======
+2015-04-16 19:08:25 : Barrack 2 Training Archer : 1
+2015-04-16 19:08:25 : Archer Remaining : 0
+2015-04-16 19:08:25 : Total troop capacity training : 207
+2015-04-16 19:08:29 : ====== Barrack 3 : ======
+2015-04-16 19:08:31 : Total troop capacity training : 207
+2015-04-16 19:08:34 : ====== Barrack 4 : ======
+2015-04-16 19:08:36 : Total troop capacity training : 207
+2015-04-16 19:08:36 : Training Troops Complete...
+2015-04-16 19:08:39 : Donating Troops
+2015-04-16 19:08:40 : No new chats, skip donating
+2015-04-16 19:08:40 : Time Idle: 0 hours 7 minutes 46 seconds
+2015-04-16 19:08:40 : ~~~Waiting for full army~~~
+2015-04-16 19:09:10 : Trying to locate Main Screen
+2015-04-16 19:09:10 : Main Screen Located
+2015-04-16 19:09:12 : Checking Army Camp...
+2015-04-16 19:09:15 : Total Troop Capacity: 92/200
+2015-04-16 19:09:15 : - Archers 92
+2015-04-16 19:09:16 : Training Troops...
+2015-04-16 19:09:19 : ====== Barrack 1 : ======
+2015-04-16 19:09:21 : Total troop capacity training : 207
+2015-04-16 19:09:24 : ====== Barrack 2 : ======
+2015-04-16 19:09:26 : Total troop capacity training : 207
+2015-04-16 19:09:30 : ====== Barrack 3 : ======
+2015-04-16 19:09:31 : Total troop capacity training : 207
+2015-04-16 19:09:35 : ====== Barrack 4 : ======
+2015-04-16 19:09:37 : Total troop capacity training : 207
+2015-04-16 19:09:37 : Training Troops Complete...
+2015-04-16 19:09:40 : Donating Troops
+2015-04-16 19:09:42 : Chat Text: any
+2015-04-16 19:09:43 : No troops available for donation, donating later...
+2015-04-16 19:09:45 : Donating Archers
+2015-04-16 19:09:50 : Chat Text: lvl 
+thank you
+2015-04-16 19:09:52 : Finished Donating
+2015-04-16 19:09:52 : Time Idle: 0 hours 8 minutes 59 seconds
+2015-04-16 19:09:52 : ~~~Waiting for full army~~~
+2015-04-16 19:10:22 : Trying to locate Main Screen
+2015-04-16 19:10:22 : Main Screen Located
+2015-04-16 19:10:25 : Checking Army Camp...
+2015-04-16 19:10:27 : Total Troop Capacity: 98/200
+2015-04-16 19:10:28 : - Archers 98
+2015-04-16 19:10:29 : Training Troops...
+2015-04-16 19:10:32 : ====== Barrack 1 : ======
+2015-04-16 19:10:34 : Barrack 1 Training Archer : 1
+2015-04-16 19:10:34 : Archer Remaining : 4
+2015-04-16 19:10:34 : Total troop capacity training : 208
+2015-04-16 19:10:37 : ====== Barrack 2 : ======
+2015-04-16 19:10:39 : Barrack 2 Training Archer : 1
+2015-04-16 19:10:39 : Archer Remaining : 3
+2015-04-16 19:10:39 : Total troop capacity training : 209
+2015-04-16 19:10:43 : ====== Barrack 3 : ======
+2015-04-16 19:10:45 : Barrack 3 Training Archer : 1
+2015-04-16 19:10:45 : Archer Remaining : 2
+2015-04-16 19:10:45 : Total troop capacity training : 210
+2015-04-16 19:10:48 : ====== Barrack 4 : ======
+2015-04-16 19:10:50 : Barrack 4 Training Archer : 1
+2015-04-16 19:10:50 : Archer Remaining : 1
+2015-04-16 19:10:50 : Total troop capacity training : 211
+2015-04-16 19:10:51 : Training Troops Complete...
+2015-04-16 19:10:54 : Donating Troops
+2015-04-16 19:10:54 : No new chats, skip donating
+2015-04-16 19:10:54 : Time Idle: 0 hours 10 minutes 1 seconds
+2015-04-16 19:10:54 : ~~~Waiting for full army~~~
+2015-04-16 19:11:24 : Trying to locate Main Screen
+2015-04-16 19:11:24 : Main Screen Located
+2015-04-16 19:11:26 : Checking Army Camp...
+2015-04-16 19:11:29 : Total Troop Capacity: 109/200
+2015-04-16 19:11:29 : - Archers 104
+2015-04-16 19:11:29 : - Barbarians 5
+2015-04-16 19:11:31 : Training Troops...
+2015-04-16 19:11:33 : ====== Barrack 1 : ======
+2015-04-16 19:11:35 : Barrack 1 Training Archer : 1
+2015-04-16 19:11:35 : Archer Remaining : 0
+2015-04-16 19:11:35 : Total troop capacity training : 212
+2015-04-16 19:11:39 : ====== Barrack 2 : ======
+2015-04-16 19:11:41 : Total troop capacity training : 212
+2015-04-16 19:11:44 : ====== Barrack 3 : ======
+2015-04-16 19:11:46 : Total troop capacity training : 212
+2015-04-16 19:11:49 : ====== Barrack 4 : ======
+2015-04-16 19:11:51 : Total troop capacity training : 212
+2015-04-16 19:11:52 : Training Troops Complete...
+2015-04-16 19:11:55 : Donating Troops
+2015-04-16 19:11:55 : No new chats, skip donating
+2015-04-16 19:11:55 : Time Idle: 0 hours 11 minutes 2 seconds
+2015-04-16 19:11:55 : ~~~Waiting for full army~~~
+2015-04-16 19:12:25 : Trying to locate Main Screen
+2015-04-16 19:12:25 : Main Screen Located
+2015-04-16 19:12:27 : Checking Army Camp...
+2015-04-16 19:12:30 : Total Troop Capacity: 121/200
+2015-04-16 19:12:30 : - Archers 105
+2015-04-16 19:12:30 : - Barbarians 16
+2015-04-16 19:12:32 : Training Troops...
+2015-04-16 19:12:34 : ====== Barrack 1 : ======
+2015-04-16 19:12:36 : Total troop capacity training : 212
+2015-04-16 19:12:40 : ====== Barrack 2 : ======
+2015-04-16 19:12:42 : Total troop capacity training : 212
+2015-04-16 19:12:45 : ====== Barrack 3 : ======
+2015-04-16 19:12:47 : Total troop capacity training : 212
+2015-04-16 19:12:50 : ====== Barrack 4 : ======
+2015-04-16 19:12:52 : Total troop capacity training : 212
+2015-04-16 19:12:53 : Training Troops Complete...
+2015-04-16 19:12:56 : Donating Troops
+2015-04-16 19:12:56 : No new chats, skip donating
+2015-04-16 19:12:56 : Time Idle: 0 hours 12 minutes 3 seconds
+2015-04-16 19:12:56 : ~~~Waiting for full army~~~
+2015-04-16 19:13:26 : Trying to locate Main Screen
+2015-04-16 19:13:26 : Main Screen Located
+2015-04-16 19:13:28 : Checking Army Camp...
+2015-04-16 19:13:31 : Total Troop Capacity: 133/200
+2015-04-16 19:13:31 : - Archers 105
+2015-04-16 19:13:31 : - Barbarians 28
+2015-04-16 19:13:32 : Training Troops...
+2015-04-16 19:13:35 : ====== Barrack 1 : ======
+2015-04-16 19:13:37 : Total troop capacity training : 212
+2015-04-16 19:13:40 : ====== Barrack 2 : ======
+2015-04-16 19:13:42 : Total troop capacity training : 212
+2015-04-16 19:13:46 : ====== Barrack 3 : ======
+2015-04-16 19:13:48 : Total troop capacity training : 212
+2015-04-16 19:13:51 : ====== Barrack 4 : ======
+2015-04-16 19:13:53 : Total troop capacity training : 212
+2015-04-16 19:13:53 : Training Troops Complete...
+2015-04-16 19:13:57 : Donating Troops
+2015-04-16 19:13:57 : No new chats, skip donating
+2015-04-16 19:13:57 : Time Idle: 0 hours 13 minutes 3 seconds
+2015-04-16 19:13:57 : ~~~Waiting for full army~~~
+2015-04-16 19:14:27 : Trying to locate Main Screen
+2015-04-16 19:14:27 : Main Screen Located
+2015-04-16 19:14:29 : Checking Army Camp...
+2015-04-16 19:14:32 : Total Troop Capacity: 146/200
+2015-04-16 19:14:32 : - Archers 105
+2015-04-16 19:14:32 : - Barbarians 41
+2015-04-16 19:14:33 : Training Troops...
+2015-04-16 19:14:36 : ====== Barrack 1 : ======
+2015-04-16 19:14:38 : Total troop capacity training : 212
+2015-04-16 19:14:41 : ====== Barrack 2 : ======
+2015-04-16 19:14:43 : Total troop capacity training : 212
+2015-04-16 19:14:47 : ====== Barrack 3 : ======
+2015-04-16 19:14:49 : Total troop capacity training : 212
+2015-04-16 19:14:52 : ====== Barrack 4 : ======
+2015-04-16 19:14:54 : Total troop capacity training : 212
+2015-04-16 19:14:54 : Training Troops Complete...
+2015-04-16 19:14:58 : Donating Troops
+2015-04-16 19:14:58 : No new chats, skip donating
+2015-04-16 19:14:58 : Time Idle: 0 hours 14 minutes 4 seconds
+2015-04-16 19:14:58 : ~~~Waiting for full army~~~
+2015-04-16 19:15:28 : Trying to locate Main Screen
+2015-04-16 19:15:28 : Main Screen Located
+2015-04-16 19:15:30 : Checking Army Camp...
+2015-04-16 19:15:33 : Total Troop Capacity: 158/200
+2015-04-16 19:15:33 : - Archers 105
+2015-04-16 19:15:33 : - Barbarians 53
+2015-04-16 19:15:34 : Training Troops...
+2015-04-16 19:15:37 : ====== Barrack 1 : ======
+2015-04-16 19:15:39 : Total troop capacity training : 212
+2015-04-16 19:15:42 : ====== Barrack 2 : ======
+2015-04-16 19:15:44 : Total troop capacity training : 212
+2015-04-16 19:15:48 : ====== Barrack 3 : ======
+2015-04-16 19:15:49 : Total troop capacity training : 212
+2015-04-16 19:15:53 : ====== Barrack 4 : ======
+2015-04-16 19:15:54 : Total troop capacity training : 212
+2015-04-16 19:15:55 : Training Troops Complete...
+2015-04-16 19:15:58 : Donating Troops
+2015-04-16 19:15:58 : No new chats, skip donating
+2015-04-16 19:15:58 : Time Idle: 0 hours 15 minutes 5 seconds
+2015-04-16 19:15:58 : ~~~Waiting for full army~~~
+2015-04-16 19:16:28 : Trying to locate Main Screen
+2015-04-16 19:16:28 : Main Screen Located
+2015-04-16 19:16:30 : Collecting Resources
+2015-04-16 19:16:40 : Checking Army Camp...
+2015-04-16 19:16:43 : Total Troop Capacity: 172/200
+2015-04-16 19:16:43 : - Archers 105
+2015-04-16 19:16:43 : - Barbarians 67
+2015-04-16 19:16:44 : Training Troops...
+2015-04-16 19:16:47 : ====== Barrack 1 : ======
+2015-04-16 19:16:49 : Total troop capacity training : 212
+2015-04-16 19:16:52 : ====== Barrack 2 : ======
+2015-04-16 19:16:54 : Total troop capacity training : 212
+2015-04-16 19:16:57 : ====== Barrack 3 : ======
+2015-04-16 19:16:59 : Total troop capacity training : 212
+2015-04-16 19:17:03 : ====== Barrack 4 : ======
+2015-04-16 19:17:04 : Total troop capacity training : 212
+2015-04-16 19:17:05 : Training Troops Complete...
+2015-04-16 19:17:08 : Donating Troops
+2015-04-16 19:17:10 : Chat Text: any
+2015-04-16 19:17:11 : Donating Barbarians
+2015-04-16 19:17:16 : Chat Text: thank you
