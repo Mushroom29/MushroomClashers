@@ -102,6 +102,19 @@ Func VillageReport()
 	GUICtrlSetData($lblresultgoldnowM, $GoldCount)
 	GUICtrlSetData($lblresultelixirnowM, $ElixirCount)
 	GUICtrlSetData($lblresultdenowM, $DarkCount)
+
+	; My custom edit
+	$minutesOfRunningTime = ($min + ($hour * 60) + 1)
+	; Gold gained minus search cost per hour
+	$goldPerHour = Floor((GUICtrlRead($lblresultgoldgain) - GUICtrlRead($lblresultsearchcost)) * 60 / $minutesOfRunningTime)
+	; Elixir per hour
+	$elixirPerHour = Floor(GUICtrlRead($lblresultelixirgain) * 60 / $minutesOfRunningTime)
+	; Dark elixir per hour
+	$darkElixirPerHour = Floor(GUICtrlRead($lblresultdegain) * 60 / $minutesOfRunningTime)
+	; Output to the log
+	SetLog("G/Hour: " & $goldPerHour & " E/Hour: " & $elixirPerHour & " DE/Hour: " & $darkElixirPerHour & " Time Running: " & StringFormat("%02i:%02i:%02i", $hour, $min, $sec) )
+    ; End my custom edit
+
 	;Reset Values
 	$LastRaidGold = 0
 	$LastRaidElixir = 0
