@@ -144,9 +144,13 @@ Func runBot() ;Bot that runs everything in order
 EndFunc   ;==>runBot
 
 Func Idle() ;Sequence that runs until Full Army
+    CheckArmyCamp()
 	Local $TimeIdle = 0 ;In Seconds
+	Local $TrainIdle = 0;
+	Local $OldCamp = $CurCamp
 	While $fullArmy = False
 		If $CommandStop = -1 Then SetLog("~~~Waiting for full army~~~", $COLOR_PURPLE)
+	    Local $TrTimer = TimerInit()
 		Local $hTimer = TimerInit(), $x = 30000
 		If $CommandStop = 3 Then $x = 15000
 		If _Sleep($x) Then ExitLoop
@@ -161,13 +165,24 @@ Func Idle() ;Sequence that runs until Full Army
 		EndIf
 		$iCollectCounter = $iCollectCounter + 1
 		If $CommandStop <> 3 Then
+		If $TrainIdle > 120 Then ;Set to your Max Single Troop Training Time in seconds
+		  If $CurCamp = $OldCamp Then
+		  SetLog("Miscalculation Detected Reseting Troops", $COLOR_RED)
+			$FirstStart = True ;Ensure camps get recalculated after battle
+			$ArmyComp = 0
+			$TrainIdle = 0
+		 Else
+			$OldCamp = $CurCamp
+			$TrainIdle = 0
+		 EndIf
+		 EndIf
 			CheckArmyCamp()
 			If _Sleep(1000) Then ExitLoop
 			TrainTroop()
 			If _Sleep(1000) Then Return
 			TrainDark()
 			If _Sleep(1000) Then ExitLoop
-		EndIf
+			EndIf
 		If $CommandStop = 0 And $fullArmy Then
 			SetLog("Army Camp is Full, Stop Training...", $COLOR_ORANGE)
 			$CommandStop = 3
@@ -180,7 +195,9 @@ Func Idle() ;Sequence that runs until Full Army
 		EndIf
 		DonateCC()
 		$TimeIdle += Round(TimerDiff($hTimer) / 1000, 2) ;In Seconds
+		$TrainIdle += Round(TimerDiff($TrTimer) / 1000, 2)
 		SetLog("Time Idle: " & Floor(Floor($TimeIdle / 60) / 60) & " hours " & Floor(Mod(Floor($TimeIdle / 60), 60)) & " minutes " & Floor(Mod($TimeIdle, 60)) & " seconds", $COLOR_ORANGE)
+		SetLog("Training Idle: " & Floor(Mod(Floor($TrainIdle / 60), 60)) & " minutes " & Floor(Mod($TrainIdle, 60)) & " seconds", $COLOR_ORANGE)
 	WEnd
 EndFunc   ;==>Idle
 
@@ -198,7 +215,7 @@ Func AttackMain() ;Main control for attack functions
 	If _Sleep(1000) Then Return
 	ReturnHome()
 	If _Sleep(1000) Then Return
-	$FirstStart = True ;Ensure camps get recalculated after battle
+	$FirstStart = False ;Ensure camps get recalculated after battle
 EndFunc   ;==>AttackMain
 
 Func Attack() ;Selects which algorithm
