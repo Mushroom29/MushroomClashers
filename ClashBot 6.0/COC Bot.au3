@@ -215,6 +215,8 @@ Func AttackMain() ;Main control for attack functions
 	If _Sleep(1000) Then Return
 	ReturnHome()
 	If _Sleep(1000) Then Return
+	AttackReport()
+	If _Sleep(1000) Then Return
 	$FirstStart = False ;Ensure camps get recalculated after battle
 EndFunc   ;==>AttackMain
 

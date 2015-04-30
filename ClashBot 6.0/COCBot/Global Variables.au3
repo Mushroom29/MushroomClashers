@@ -270,3 +270,6 @@ Global $LastRaidGold = 0
 Global $LastRaidElixir = 0
 Global $LastRaidDarkElixir = 0
 Global $LastRaidTrophy = 0
+
+Global $NumberOfTimesUnableToReadGold = 0
+Global $SearchCountTotalBeforeAttack = 0
