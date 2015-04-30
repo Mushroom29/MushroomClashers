@@ -5,7 +5,7 @@ Func AttackReport() ;Return main screen
    Local Const $SECONDS_PER_MINUTE = 60
 
    Local $minutesOfRunningTime = ($min + ($hour * $MINUTES_PER_HOUR) + 1)
-   Local $secondsOfRunningTime = ($sec + ($min + ($hour * $MINUTES_PER_HOUR) * $SECONDS_PER_MINUTE) + 1)
+   Local $secondsOfRunningTime = ($sec + (($min + ($hour * $MINUTES_PER_HOUR)) * $SECONDS_PER_MINUTE) + 1)
    ; Gold gained minus search cost per hour
    Local $goldPerHour = Floor((($GoldGained + $LastRaidGold) - GUICtrlRead($lblresultsearchcost)) * $MINUTES_PER_HOUR / $minutesOfRunningTime)
    ; Elixir per hour
@@ -33,8 +33,9 @@ Func AttackReport() ;Return main screen
    EndIf
 
    ; Average time between attacks in minutes to two decimal points
-   Local $minutesPerAttack = (Round((($secondsOfRunningTime * GUICtrlRead($lblresultvillagesattacked)) / $SECONDS_PER_MINUTE) * 100) / 100)
-   ; Output all of the resource information into a table
+   Local $minutesPerAttack = (Round((($secondsOfRunningTime / GUICtrlRead($lblresultvillagesattacked)) / $SECONDS_PER_MINUTE) * 100) / 100)
+
+; Output all of the resource information into a table
    SetLog("         Gold     Elix     Dark", $COLOR_GREEN)
    SetLog("Last:" & Tab($LastRaidGold,7) & $LastRaidGold & Tab($LastRaidElixir,8) & $LastRaidElixir & Tab($LastRaidDarkElixir,8) & $LastRaidDarkElixir, $COLOR_GREEN)
    SetLog("Perc:" & Tab($goldPercentRaided,7) & $goldPercentRaided & Tab($elixirPercentRaided,8) & $elixirPercentRaided & Tab($darkElixirPercentRaided,8) & $darkElixirPercentRaided, $COLOR_GREEN)

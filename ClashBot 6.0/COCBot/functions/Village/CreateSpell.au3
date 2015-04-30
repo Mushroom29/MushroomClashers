@@ -15,7 +15,7 @@ Func CreateSpell()
 	Click($SFactoryPos[0], $SFactoryPos[1]) ;Click Spell Factory
 	If _Sleep(500) Then Return
 
-	Local $CreatePos = _PixelSearch(249, 563, 610, 639, Hex(0x001048, 6), 5) ;Finds Create Spells button
+	Local $CreatePos = _PixelSearch(500, 596, 570, 598, Hex(0x275C8F, 6), 5)  ;Finds Create Spells button
 	If IsArray($CreatePos) = False Then
 		SetLog("Spell Factory is not available", $COLOR_RED)
 		If _Sleep(500) Then Return
