@@ -21,8 +21,20 @@ Func getDigitTownHall(ByRef $x, $y)
 	EndIf
 
 	;Search for digit 8
-	Local $c1 = Hex(0x070707, 6), $c2 = Hex(0x707070, 6), $c3 = Hex(0x505050, 6)
-	Local $pixel1[3] = [$x + 6, $y + 4, $c1], $pixel2[3] = [$x + 6, $y + 10, $c2], $pixel3[3] = [$x + 2, $y + 8, $c3]
+	Local $c1 = Hex(0x070707, 6), $c2 = Hex(0x808080, 6), $c3 = Hex(0x505050, 6)
+	Local $pixel1[3] = [$x + 7, $y + 4, $c1], $pixel2[3] = [$x + 6, $y + 10, $c2], $pixel3[3] = [$x + 2, $y + 8, $c3]
+
+	; used for debugging when the the digit image search wasn't working
+	;_CaptureRegion($pixel1[0], $pixel1[1],$pixel1[0] + 50,$pixel1[1] + 10)
+	;_GDIPlus_ImageSaveToFile($hBitmap, @ScriptDir & "\TestPictures\" & "Picture_" & $x & "_1.png")
+	;_CaptureRegion($pixel2[0], $pixel2[1],$pixel2[0] + 50,$pixel2[1] + 10)
+	;_GDIPlus_ImageSaveToFile($hBitmap, @ScriptDir & "\TestPictures\" & "Picture_" & $x & "_2.png")
+	;_CaptureRegion($pixel3[0], $pixel3[1],$pixel3[0] + 50,$pixel3[1] + 10)
+	;_GDIPlus_ImageSaveToFile($hBitmap, @ScriptDir & "\TestPictures\" & "Picture_" & $x & "_3.png")
+    ;SetLog("$pixel1[3] = [" & ($x + 6)&", "&($y + 4) & ", " & ($c1) & "])
+	;SetLog("$pixel2[3] = [" & ($x + 6)&", "&($y + 10) & ", " & $c2 & "])
+	;SetLog("$pixel3[3] = [" & ($x + 2)&", "&($y + 8) & ", " & $c3 & "])
+
 	If boolPixelSearch($pixel1, $pixel2, $pixel3) Then
 		Return 8
 	EndIf
