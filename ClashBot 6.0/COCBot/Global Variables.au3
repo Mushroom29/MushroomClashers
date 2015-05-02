@@ -273,3 +273,7 @@ Global $LastRaidTrophy = 0
 
 Global $NumberOfTimesUnableToReadGold = 0
 Global $SearchCountTotalBeforeAttack = 0
+Global $SearchCountTotalGlobal = 0
+Global $TimeOfLastAttackHour = 0
+Global $TimeOfLastAttackMin = 0
+Global $TimeOfLastAttackSec = 0

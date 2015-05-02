@@ -11,9 +11,10 @@ Func GetResources() ;Reads resources
 			If _Sleep(500, False) Then ExitLoop (2)
 			$i += 1
 			If $i >= 20 Then ; If gold cannot be read by 10 seconds
-			    _CaptureRegion()
-				$NumberOfTimesUnableToReadGold += 1
-				_GDIPlus_ImageSaveToFile($hBitmap, @ScriptDir & "\ErrorPictures\" & "Error_Number_" & $NumberOfTimesUnableToReadGold & ".png")
+			    $NumberOfTimesUnableToReadGold += 1
+				; Save a picture of the error
+			    ;_CaptureRegion()
+				;_GDIPlus_ImageSaveToFile($hBitmap, @ScriptDir & "\ErrorPictures\" & "Error_Number_" & $NumberOfTimesUnableToReadGold & ".png")
 				If checkNextButton() And $x <= 20 Then ;Checks for Out of Sync or Connection Error during search
 					Click(750, 500) ;Click Next
 					$x += 1
