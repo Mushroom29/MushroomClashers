@@ -18,8 +18,8 @@ Func ReArm()
 	Local $x1 = 240, $y1 = 563, $x2 = 670, $y2 = 600 ;Coordinates for button search
 
 	;Traps
-	Local $offColors[3][3] = [[0x8B7E79, 26, 25], [0xE2C73A, 70, 7], [0x2B2D1F, 76, 0]] ; 2nd pixel brown wrench, 3rd pixel gold, 4th pixel edge of button
-	Local $RearmPixel = _MultiPixelSearch($x1, $y1, $x2, $y2, 1, 1, Hex(0xF2F6F5, 6), $offColors, 30) ; first white pixel of button
+	Local $offColors[3][3] = [[0x787882, 26, 25], [0xDBB731, 70, 7], [0xF1F2EE, 79, 0]] ; 2nd pixel brown wrench (21,21), 3rd pixel gold, 4th pixel edge of button
+	Local $RearmPixel = _MultiPixelSearch($x1, $y1, $x2, $y2, 1, 1, Hex(0xF2F9F5, 6), $offColors, 30) ; first white pixel of button
 	If IsArray($RearmPixel) Then
 		Click($RearmPixel[0] + 20, $RearmPixel[1] + 20) ; Click RearmButton
 		If _WaitForPixel(350, 420, Hex(0xC83B10, 6), 20) Then
