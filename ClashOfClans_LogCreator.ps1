@@ -4,6 +4,7 @@ $FullLogFile = "C:\Users\Kevin Johnson\Dropbox\FullLog.txt"
 $ResourceLogFile = "C:\Users\Kevin Johnson\Dropbox\ResourceLog.txt"
 $MatchingLogFile = "C:\Users\Kevin Johnson\Dropbox\MatchingLog.txt"
 $WallsLogFile = "C:\Users\Kevin Johnson\Dropbox\WallsLog.txt"
+$AttackReportLogFile = "C:\Users\Kevin Johnson\Dropbox\AttackReportLog.txt"
 
 $CharToOmit = 11
 
@@ -24,7 +25,7 @@ while($true)
         Add-Content $FullLogFile $FullData.substring($CharToOmit)
     }
 
-    $ResourceData = Get-Content $ClashBotLogFiles | where { $_ -match "Resources: " -or $_ -match " Last:"  -or $_ -match " Perc:" -or $_ -match " Hour:" -or $_ -match "    Gold"} | select -Last 100
+    $ResourceData = Get-Content $ClashBotLogFiles | where { $_ -match "Resources: " } | select -Last 100
     Clear-Content $ResourceLogFile
     if($ResourceData)
     {
@@ -52,6 +53,16 @@ while($true)
         [array]::Reverse($WallsData)
         # Add to the log file and omit the characters from the date stamp
         Add-Content $WallsLogFile $WallsData.substring($CharToOmit)
+    }
+
+    $AttackReportData = Get-Content $ClashBotLogFiles | where { $_ -match "=Attack Report=" -or $_ -match "\[Gld\+\]:" -or $_ -match "\[Elx\+\]:" -or $_ -match "\[Dlx\+\]:" -or $_ -match "\[Time\+\]:" -or $_ -match "\[Srchs\]:" -or $_ -match "\[Err\]:"} | select -Last 100
+    Clear-Content $AttackReportLogFile
+    if($AttackReportData)
+    {
+        # Reverse the log file so newest is on top
+        [array]::Reverse($AttackReportData)
+        # Add to the log file and omit the characters from the date stamp
+        Add-Content $AttackReportLogFile $AttackReportData.substring($CharToOmit)
     }
 
     #wait 60 seconds before updating logs again
