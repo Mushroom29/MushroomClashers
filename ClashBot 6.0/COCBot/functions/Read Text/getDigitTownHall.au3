@@ -40,7 +40,7 @@ Func getDigitTownHall(ByRef $x, $y)
 	EndIf
 
 	;Search for digit 7
-	Local $c1 = Hex(0x6E6E6E, 6), $c2 = Hex(0x4F4F4F, 6), $c3 = Hex(0x6E6E6E, 6)
+	Local $c1 = Hex(0x6E6E6E, 6), $c2 = Hex(0x202020, 6), $c3 = Hex(0x6E6E6E, 6)
 	Local $pixel1[3] = [$x + 8, $y + 10, $c1], $pixel2[3] = [$x + 5, $y + 4, $c2], $pixel3[3] = [$x + 10, $y + 6, $c3]
 	If boolPixelSearch($pixel1, $pixel2, $pixel3) Then
 		Return 7
