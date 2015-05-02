@@ -83,7 +83,7 @@ Func VillageReport()
 	    GUICtrlSetData($lblresultdelast, $LastRaidDarkElixir)
 	    GUICtrlSetData($lblresulttrophylast, $LastRaidTrophy)
 
-	    if $PushBulletEnabled = 1 and $PushBulletlastraid = 1 And $PushBullettype = 0 and $Raid = 1 Then
+	    if $PushBulletEnabled = 1 and $PushBulletlastraid = 1 And $PushBullettype = 0 and $Raid = 1 And $TakeLootSnapShot = 1 Then
 		If _Sleep(2000) Then Return
 			_PushFile($FileName, "loots", "image/jpeg", "Last Raid", $FileName)
 			$Raid = 0
