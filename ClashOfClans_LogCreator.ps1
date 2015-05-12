@@ -55,7 +55,7 @@ while($true)
         Add-Content $WallsLogFile $WallsData.substring($CharToOmit)
     }
 
-    $AttackReportData = Get-Content $ClashBotLogFiles | where { $_ -match "=Attack Report=" -or $_ -match "\[Gld\+\]:" -or $_ -match "\[Elx\+\]:" -or $_ -match "\[Dlx\+\]:" -or $_ -match "\[Time\+\]:" -or $_ -match "\[Srchs\]:" -or $_ -match "\[Err\]:"} | select -Last 100
+    $AttackReportData = Get-Content $ClashBotLogFiles | where { $_ -match "=Attack Report=" -or  $_ -match "=Last Attack=" -or $_ -match "\[Gld\+\]:" -or $_ -match "\[Elx\+\]:" -or $_ -match "\[Dlx\+\]:" -or $_ -match "\[Srchs\]:" -or $_ -match "\[Gld/H\]:" -or $_ -match "\[Elx/H\]:" -or $_ -match "\[Dlx/H\]:" -or $_ -match "\[Attck\]:" -or $_ -match "\[Time/Attck\]:"  -or $_ -match "\[TrnT\]:" } | select -Last 100
     Clear-Content $AttackReportLogFile
     if($AttackReportData)
     {
