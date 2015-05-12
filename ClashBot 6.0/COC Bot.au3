@@ -199,6 +199,8 @@ Func Idle() ;Sequence that runs until Full Army
 		SetLog("Time Idle: " & Floor(Floor($TimeIdle / 60) / 60) & " hours " & Floor(Mod(Floor($TimeIdle / 60), 60)) & " minutes " & Floor(Mod($TimeIdle, 60)) & " seconds", $COLOR_ORANGE)
 		SetLog("Training Idle: " & Floor(Mod(Floor($TrainIdle / 60), 60)) & " minutes " & Floor(Mod($TrainIdle, 60)) & " seconds", $COLOR_ORANGE)
 	WEnd
+	$LengthOfTrainTime = TimerDiff($SearchTrainHandle)
+	$SearchTimeHandle = TimerInit()
 EndFunc   ;==>Idle
 
 Func AttackMain() ;Main control for attack functions
@@ -208,6 +210,8 @@ Func AttackMain() ;Main control for attack functions
 	VillageSearch()
 	If $CommandStop = 0 Then Return
 	If _Sleep(1000, False) Or $Restart = True Then Return
+	$LengthOfSearchTime = TimerDiff($SearchTimeHandle)
+	Local $attackTime = TimerInit()
 	PrepareAttack()
 	If _Sleep(1000, False) Then Return
 	Attack()
@@ -215,6 +219,7 @@ Func AttackMain() ;Main control for attack functions
 	If _Sleep(1000) Then Return
 	ReturnHome()
 	If _Sleep(1000) Then Return
+	$LengthOfAttackTime = TimerDiff($attackTime)
 	AttackReport()
 	If _Sleep(1000) Then Return
 	$FirstStart = False ;Ensure camps get recalculated after battle

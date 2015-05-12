@@ -271,9 +271,22 @@ Global $LastRaidElixir = 0
 Global $LastRaidDarkElixir = 0
 Global $LastRaidTrophy = 0
 
+;Attack Report
 Global $NumberOfTimesUnableToReadGold = 0
 Global $SearchCountTotalBeforeAttack = 0
 Global $SearchCountTotalGlobal = 0
 Global $TimeOfLastAttackHour = 0
 Global $TimeOfLastAttackMin = 0
 Global $TimeOfLastAttackSec = 0
+Global $AllGoldGains[1]
+$AllGoldGains[0] = -1
+Global $AllElixirGains[1]
+$AllElixirGains[0] = -1
+Global $AllDarkElixirGains[1]
+$AllDarkElixirGains[0] = -1
+Global $SearchTrainHandle = 0
+Global $SearchTimeHandle = 0
+Global $LengthOfTrainTime = 0
+Global $LengthOfSearchTime = 0
+Global $LengthOfAttackTime = 0
+$SearchTrainHandle = TimerInit()
