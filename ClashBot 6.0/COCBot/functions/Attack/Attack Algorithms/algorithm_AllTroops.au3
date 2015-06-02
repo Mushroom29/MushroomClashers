@@ -328,5 +328,7 @@ Func algorithm_AllTroops() ;Attack Algorithm for all existing troops
 			EndIf
 		EndIf
 	EndIf
+	SetLog("Troops Not Deplyed", $COLOR_GREEN)
+	PrepareAttack(True) ;Check remaining quantities
 	SetLog("~Finished Attacking, waiting to finish", $COLOR_GREEN)
 EndFunc   ;==>algorithm_AllTroops
