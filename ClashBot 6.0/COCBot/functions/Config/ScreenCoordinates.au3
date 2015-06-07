@@ -57,11 +57,12 @@ EndFunc
 Func IdentifyTroopKind($position)
    _CaptureRegion()
    $TroopPixel = _GetPixelColor(68 + (72 * $position), 595)
-   If _ColorCheck($TroopPixel, Hex(0xF8B020, 6), 5) Then Return $eBarbarian ;Check if slot is Barbarian
+   ;SetLog("IdentifyTroopKind - Position: " & $position & " Color: " & $TroopPixel) ;Enable this line for debugging troops identification
+   If _ColorCheck($TroopPixel, Hex(0xF8B120, 6), 5) Then Return $eBarbarian ;Check if slot is Barbarian
    If _ColorCheck($TroopPixel, Hex(0xD83F68, 6), 5) Then Return $eArcher ;Check if slot is Archer
    If _ColorCheck($TroopPixel, Hex(0x7BC950, 6), 5) Then Return $eGoblin ;Check if slot is Goblin
    If _ColorCheck($TroopPixel, Hex(0xF8D49E, 6), 5) Then Return $eGiant ;Check if slot is Giant
-   If _ColorCheck($TroopPixel, Hex(0x60A4D0, 6), 5) Then Return $eWallbreaker ;Check if slot is Wallbreaker
+   If _ColorCheck($TroopPixel, Hex(0x5FA2CE, 6), 5) Then Return $eWallbreaker ;Check if slot is Wallbreaker
    If _ColorCheck(_GetPixelColor(68 + (72 * $position), 586), Hex(0x162038, 6), 5) Then Return $eMinion ;Check if slot is Minions
    If _ColorCheck($TroopPixel, Hex(0x603B30, 6), 5) Then Return $eHog ;Check if slot is Hogs
    If _ColorCheck($TroopPixel, Hex(0xB9645F, 6), 5) Then Return $eValkyrie ;Check if slot is Valkyries
