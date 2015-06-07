@@ -24,7 +24,7 @@ Func CheckCostPerSearch()
 	  Click($Info[0], $Info[1]) ;Click Info Button
 
 		If _Sleep(800) Then Return
-		Local $THLevel = getOther(495, 136, "Townhall")
+		$THLevel = getOther(495, 136, "Townhall")
 		; this is useful for debugging to help figure out the correct y cordinate to pass into getOther()
 		;Local $testVariable = 0
 		;While $testVariable  < 20

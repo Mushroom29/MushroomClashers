@@ -289,4 +289,4 @@ Global $SearchTimeHandle = 0
 Global $LengthOfTrainTime = 0
 Global $LengthOfSearchTime = 0
 Global $LengthOfAttackTime = 0
-$SearchTrainHandle = TimerInit()
+$SearchTrainHandle = TimerInit()Global $THLevel = 0
