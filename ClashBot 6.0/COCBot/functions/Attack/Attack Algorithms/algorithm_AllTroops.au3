@@ -262,7 +262,7 @@ Func algorithm_AllTroops() ;Attack Algorithm for all existing troops
 	If _Sleep(100, False) Then Return
 	SetLog("Dropping left over troops", $COLOR_BLUE)
 	For $x = 0 To 1
-		PrepareAttack(True) ;Check remaining quantities
+		PrepareAttack("Remaining") ;Check remaining quantities
 		For $i = $eBarbarian To $eMinion ; lauch all remaining troops
 			If $i = $eBarbarian Or $i = $eArcher Or $i = $eMinion Or $i = $eHog Or $i = $eValkyrie Then
 				LaunchTroop($i, $nbSides, 0, 1)
@@ -328,7 +328,5 @@ Func algorithm_AllTroops() ;Attack Algorithm for all existing troops
 			EndIf
 		EndIf
 	EndIf
-	SetLog("Troops Not Deplyed", $COLOR_GREEN)
-	PrepareAttack(True) ;Check remaining quantities
 	SetLog("~Finished Attacking, waiting to finish", $COLOR_GREEN)
 EndFunc   ;==>algorithm_AllTroops

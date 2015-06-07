@@ -11,7 +11,7 @@ Func ReturnHome($TakeLootSnapShot = 1, $GoldChangeCheck = True) ;Return main scr
 			If _Sleep(1000) Then Return
 		WEnd
 	EndIf
-
+	PrepareAttack("Ending") ;Check troops leftover
 	$checkKPower = False
 	$checkQPower = False
 	SetLog("Returning Home", $COLOR_BLUE)

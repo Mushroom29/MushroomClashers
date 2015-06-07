@@ -1,11 +1,31 @@
 ;Checks the troops when in battle, checks for type, slot, and quantity.
 ;Saved in $atkTroops[SLOT][TYPE/QUANTITY] variable
 
-Func PrepareAttack($remaining = False) ;Assigns troops
-	If $remaining Then
-		SetLog("Checking remaining unlaunched troops", $COLOR_ORANGE)
-	Else
+Func PrepareAttack($stage = "Preparing") ;Assigns troops
+	If $stage = "Preparing" Then
 		SetLog("Preparing to attack", $COLOR_BLUE)
+		;Reset the variables that save the number of troops
+		$AttackStartingBarbarians = 0
+		$AttackStartingArchers = 0
+		$AttackStartingGiants = 0
+		$AttackStartingGoblins = 0
+		$AttackStartingWallbreakers = 0
+		$AttackStartingLightningSpells = 0
+	ElseIf $stage = "Remaining" Then
+		SetLog("Checking remaining unlaunched troops", $COLOR_ORANGE)
+	ElseIf  $stage = "Ending" Then
+		SetLog("Troops Not Deployed", $COLOR_ORANGE)
+		;Reset the variables that save the number of troops
+		$AttackEndingBarbarians = 0
+		$AttackEndingArchers = 0
+		$AttackEndingGiants = 0
+		$AttackEndingGoblins = 0
+		$AttackEndingWallbreakers = 0
+		If $CreateSpell = True Then
+			$AttackEndingLightningSpells = 0
+		Else
+			$AttackEndingLightningSpells = $AttackStartingLightningSpells
+		EndIf
 	EndIf
 	_CaptureRegion()
 
@@ -56,5 +76,36 @@ Func PrepareAttack($remaining = False) ;Assigns troops
 		EndIf
 		$atkTroops[$i][0] = $troopKind
 		If $troopKind <> -1 Then SetLog("-" & NameOfTroop($atkTroops[$i][0]) & " " & $atkTroops[$i][1], $COLOR_GREEN)
+
+		;Record the number of troops
+		If $stage = "Preparing" Then
+		   If $troopKind = $eBarbarian Then
+			  $AttackStartingBarbarians = $atkTroops[$i][1]
+		   ElseIf $troopKind = $eArcher Then
+			  $AttackStartingArchers = $atkTroops[$i][1]
+		   ElseIf $troopKind = $eGiant Then
+			  $AttackStartingGiants = $atkTroops[$i][1]
+		   ElseIf $troopKind = $eGoblin Then
+			  $AttackStartingGoblins = $atkTroops[$i][1]
+		   ElseIf $troopKind = $eWallbreaker Then
+			  $AttackStartingWallbreakers = $atkTroops[$i][1]
+		   ElseIf $troopKind = $eLSpell Then
+			  $AttackStartingLightningSpells = $atkTroops[$i][1]
+		   EndIf
+		ElseIf $stage = "Ending" Then
+		   If $troopKind = $eBarbarian Then
+			  $AttackEndingBarbarians = $atkTroops[$i][1]
+		   ElseIf $troopKind = $eArcher Then
+			  $AttackEndingArchers = $atkTroops[$i][1]
+		   ElseIf $troopKind = $eGiant Then
+			  $AttackEndingGiants = $atkTroops[$i][1]
+		   ElseIf $troopKind = $eGoblin Then
+			  $AttackEndingGoblins = $atkTroops[$i][1]
+		   ElseIf $troopKind = $eWallbreaker Then
+			  $AttackEndingWallbreakers = $atkTroops[$i][1]
+		   ElseIf $troopKind = $eLSpell Then
+			  $AttackEndingLightningSpells = $atkTroops[$i][1]
+		   EndIf
+		EndIf
 	Next
 EndFunc   ;==>PrepareAttack

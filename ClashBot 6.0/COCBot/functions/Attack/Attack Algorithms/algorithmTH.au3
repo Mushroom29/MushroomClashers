@@ -178,7 +178,7 @@ Func algorithmTH() ;Attack Algorithm TH
 			ExitLoop
 		WEnd
 		If $THLocation <> 0 Then
-			PrepareAttack(True) ;Check remaining quantities
+			PrepareAttack("Preparing") ;Check remaining quantities
 		EndIf
 	EndIf
 EndFunc   ;==>algorithmTH

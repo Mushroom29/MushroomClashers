@@ -207,7 +207,7 @@ Func algorithm_Troops() ;Attack Algorithm for all existing troops
 	If _Sleep(100) Then Return
 	SetLog("Dropping left over troops", $COLOR_BLUE)
 	For $x = 0 To 1
-		PrepareAttack(True) ;Check remaining quantities
+		PrepareAttack("Preparing") ;Check remaining quantities
 		For $i = $eBarbarian To $eWallbreaker ; lauch all remaining troops
 			If $i = $eBarbarian Or $i = $eArcher Or $i = $eGoblin Then
 				LaunchTroop2($i, $nbSides, 0, 1)

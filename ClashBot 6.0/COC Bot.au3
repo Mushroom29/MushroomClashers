@@ -212,7 +212,7 @@ Func AttackMain() ;Main control for attack functions
 	If _Sleep(1000, False) Or $Restart = True Then Return
 	$LengthOfSearchTime = TimerDiff($SearchTimeHandle)
 	Local $attackTime = TimerInit()
-	PrepareAttack()
+	PrepareAttack("Preparing")
 	If _Sleep(1000, False) Then Return
 	Attack()
 	$DCattack = 0

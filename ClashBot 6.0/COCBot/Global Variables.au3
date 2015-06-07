@@ -289,4 +289,19 @@ Global $SearchTimeHandle = 0
 Global $LengthOfTrainTime = 0
 Global $LengthOfSearchTime = 0
 Global $LengthOfAttackTime = 0
-$SearchTrainHandle = TimerInit()Global $THLevel = 0
+$SearchTrainHandle = TimerInit()
+
+Global $THLevel = 0
+Global $TotalElixerSpentOnTroops = 0
+Global $AttackStartingBarbarians = 0
+Global $AttackStartingArchers = 0
+Global $AttackStartingGiants = 0
+Global $AttackStartingGoblins = 0
+Global $AttackStartingWallbreakers = 0
+Global $AttackStartingLightningSpells = 0
+Global $AttackEndingBarbarians = 0
+Global $AttackEndingArchers = 0
+Global $AttackEndingGiants = 0
+Global $AttackEndingGoblins = 0
+Global $AttackEndingWallbreakers = 0
+Global $AttackEndingLightningSpells = 0
