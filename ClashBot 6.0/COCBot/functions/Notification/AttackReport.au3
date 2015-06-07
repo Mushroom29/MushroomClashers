@@ -4,6 +4,21 @@ Func AttackReport() ;Return main screen
    Local Const $MINUTES_PER_HOUR = 60
    Local Const $SECONDS_PER_MINUTE = 60
 
+   Local Const $BARBARIAN_COST_ARRAY = 0
+   Local Const $ARCHER_COST_ARRAY = 1
+   Local Const $GIANT_COST_ARRAY = 2
+   Local Const $GOBLIN_COST_ARRAY = 3
+   Local Const $WALLBREAKER_COST_ARRAY = 4
+   Local Const $LIGHTNING_SPELL_COST_ARRAY = 5
+
+							   ;Town Hall    1     2     3     4     5     6     7     8     9    10
+   Local Const $BARRACKS_COST[6][10] = [[   25,   25,   40,   40,   60,   60,   80,  100,  150,  200], _ ;Barbarian
+									    [   50,   50,   80,   80,  120,  120,  160,  200,  300,  400], _ ;Archer
+										[  250,  250,  250,  750,  750, 1250, 1750, 2250, 3000, 3500], _ ;Giant
+										[   25,   25,   40,   40,   60,   60,   80,  100,  100,  150], _ ;Goblin
+										[ 1000, 1000, 1000, 1500, 1500, 2000, 2500, 3000, 3000, 3500], _ ;Wallbreaker
+										[15000,15000,16500,18000,20000,20000,20000,22000,22000,24000]]   ;Lightning Spell
+
    ; Set to "---" by default for the unable to calculate value
    Local $goldPercentRaided = "---"
    Local $elixirPercentRaided = "---"
@@ -14,6 +29,7 @@ Func AttackReport() ;Return main screen
    Local $goldStandardDeviation = "---"
    Local $elixirStandardDeviation = "---"
    Local $darkElixirStandardDeviation = "---"
+   Local $averageElixirSpentOnTroops = "---"
 
    ; time variables
    Local $minutesOfRunningTime = ($min + ($hour * $MINUTES_PER_HOUR) + 1)
@@ -28,10 +44,30 @@ Func AttackReport() ;Return main screen
    Local $attackMin = 0
    Local $attackSec = 0
 
+   ; Calculate number of troops deployed in last attack
+   Local $deployedBarbarians = $AttackStartingBarbarians - $AttackEndingBarbarians
+   Local $deployedArchers = $AttackStartingArchers - $AttackEndingArchers
+   Local $deployedGiants = $AttackStartingGiants - $AttackEndingGiants
+   Local $deployedGoblins = $AttackStartingGoblins - $AttackEndingGoblins
+   Local $deployedWallbreakers = $AttackStartingWallbreakers - $AttackEndingWallbreakers
+   Local $deployedLightningSpells = $AttackStartingLightningSpells - $AttackEndingLightningSpells
+
+   ; Calculate the cost of troops deployed in last attack
+   Local $lastElixerSpentOnTroops = (($deployedBarbarians * $BARRACKS_COST[$BARBARIAN_COST_ARRAY][$THLevel-1]) + _
+									 ($deployedArchers * $BARRACKS_COST[$ARCHER_COST_ARRAY][$THLevel-1]) + _
+									 ($deployedGiants * $BARRACKS_COST[$GIANT_COST_ARRAY][$THLevel-1]) + _
+									 ($deployedGoblins * $BARRACKS_COST[$GOBLIN_COST_ARRAY][$THLevel-1]) + _
+									 ($deployedWallbreakers * $BARRACKS_COST[$WALLBREAKER_COST_ARRAY][$THLevel-1]) + _
+									 ($deployedLightningSpells * $BARRACKS_COST[$LIGHTNING_SPELL_COST_ARRAY][$THLevel-1]))
+   $TotalElixerSpentOnTroops += $lastElixerSpentOnTroops
+
+   ; Search cost for the last attack
+   Local $lastGoldSpentSearching =  ($SearchCountTotalBeforeAttack * $SearchCost)
+
    ; Gold gained minus search cost per hour
    Local $goldPerHour = Floor((($GoldGained + $LastRaidGold) - GUICtrlRead($lblresultsearchcost)) * $MINUTES_PER_HOUR / $minutesOfRunningTime)
    ; Elixir per hour
-   Local $elixirPerHour = Floor(($ElixirGained + $LastRaidElixir) * $MINUTES_PER_HOUR / $minutesOfRunningTime)
+   Local $elixirPerHour = Floor((($ElixirGained + $LastRaidElixir) - $TotalElixerSpentOnTroops) * $MINUTES_PER_HOUR / $minutesOfRunningTime)
    ; Dark elixir per hour
    Local $darkElixirPerHour = Floor(($DarkGained + $LastRaidDarkElixir) * $MINUTES_PER_HOUR / $minutesOfRunningTime)
 
@@ -61,7 +97,7 @@ Func AttackReport() ;Return main screen
 	  If (($elixirPercentRaided < 0) Or ($elixirPercentRaided > 100)) Then
 		$elixirPercentRaided = "ERROR"
 	  EndIf
-  EndIf
+   EndIf
 
    ; Percent of dark elixir gained in last raid
    if ($searchDark <> 0) Then
@@ -80,7 +116,13 @@ Func AttackReport() ;Return main screen
 	  $searchesPerAttack = (Round(($SearchCountTotalGlobal / GUICtrlRead($lblresultvillagesattacked)) * 100) / 100)
 
 	  ; Average number of errors per attack to two decimal points
-	  $errorsPerAttack  = (Round(($NumberOfTimesUnableToReadGold / GUICtrlRead($lblresultvillagesattacked)) * 100) / 100)
+	  $errorsPerAttack = (Round(($NumberOfTimesUnableToReadGold / GUICtrlRead($lblresultvillagesattacked)) * 100) / 100)
+
+	  ; Average gold spent on searches rounded to integer
+	  $averageGoldSpentSearching = Round(GUICtrlRead($lblresultsearchcost) / GUICtrlRead($lblresultvillagesattacked))
+
+	  ; Average elixir spent on troops rounded to integer
+	  $averageElixirSpentOnTroops = Round($TotalElixerSpentOnTroops / GUICtrlRead($lblresultvillagesattacked))
    EndIf
 
    If (GUICtrlRead($lblresultvillagesattacked) = 0) Then
@@ -104,19 +146,20 @@ Func AttackReport() ;Return main screen
    EndIf
 
    SetLog("=================Last Attack=================", $COLOR_BLUE)
-   SetLog("[Gld+]:" & Tab($LastRaidGold,6) & $LastRaidGold & "  [Gld%]:" & Tab($goldPercentRaided,3) & $goldPercentRaided, $COLOR_GREEN)
-   SetLog("[Elx+]:" & Tab($LastRaidElixir,6) & $LastRaidElixir & "  [Elx%]:" & Tab($elixirPercentRaided,3) & $elixirPercentRaided, $COLOR_GREEN)
+   SetLog("[Gld+]:" & Tab($LastRaidGold,6) & $LastRaidGold & "  [Gld%]:" & Tab($goldPercentRaided,3) & $goldPercentRaided & "  [GldSpnt]:" & Tab($lastGoldSpentSearching,5) & $lastGoldSpentSearching, $COLOR_GREEN)
+   SetLog("[Elx+]:" & Tab($LastRaidElixir,6) & $LastRaidElixir & "  [Elx%]:" & Tab($elixirPercentRaided,3) & $elixirPercentRaided & "  [ElxSpnt]:" & Tab($lastElixerSpentOnTroops,5) & $lastElixerSpentOnTroops, $COLOR_GREEN)
    SetLog("[Dlx+]:" & Tab($LastRaidDarkElixir,6) & $LastRaidDarkElixir & "  [Dlx%]:" & Tab($darkElixirPercentRaided,3) & $darkElixirPercentRaided, $COLOR_GREEN)
    SetLog("[Srchs]:" & Tab($SearchCountTotalBeforeAttack,5) & $SearchCountTotalBeforeAttack & "  [Time]:" & Tab($timeSinceLastAttack,4) & $timeSinceLastAttack, $COLOR_GREEN)
    SetLog("[TrnT]: " & StringFormat("%02i:%02i", $trainMin, $trainSec) & "  [SrchT]: " & StringFormat("%02i:%02i", $searchMin, $searchSec) & "  [AttckT]: " & StringFormat("%02i:%02i", $attackMin, $attackSec), $COLOR_GREEN)
-
+   SetLog("===============Troops Deployed===============", $COLOR_BLUE)
+   SetLog("[Barb]:" & Tab($deployedBarbarians,3) & $deployedBarbarians &"  [Arch]:" & Tab($deployedArchers,3) & $deployedArchers & "  [Gbln]:" & Tab($deployedGoblins,3) & $deployedGoblins, $COLOR_GREEN)
+   SetLog("[Gint]:" & Tab($deployedGiants,3) & $deployedGiants & "  [Wbkr]:" & Tab($deployedWallbreakers,3) & $deployedWallbreakers & "  [Lght]:" & Tab($deployedLightningSpells,3) & $deployedLightningSpells, $COLOR_GREEN)
    SetLog("================Attack Report================", $COLOR_BLUE)
    SetLog("[Gld/H]:" & Tab($goldPerHour,6) & $goldPerHour & "  [GldAvg]:" & Tab($goldAverage,6) & $goldAverage & "  [GldStdDvn]:" & Tab($goldStandardDeviation,6) & $goldStandardDeviation, $COLOR_GREEN)
    SetLog("[Elx/H]:" & Tab($elixirPerHour,6) & $elixirPerHour & "  [ElxAvg]:" & Tab($elixirAverage,6) & $elixirAverage & "  [ElxStdDvn]:" & Tab($elixirStandardDeviation,6) & $elixirStandardDeviation, $COLOR_GREEN)
    SetLog("[Dlx/H]:" & Tab($darkElixirPerHour,6) & $darkElixirPerHour & "  [DlxAvg]:" & Tab($darkElixirAverage,6) & $darkElixirAverage & "  [DlxStdDvn]:" & Tab($darkElixirStandardDeviation,6) & $darkElixirStandardDeviation, $COLOR_GREEN)
-   SetLog("[Attck]: " & GUICtrlRead($lblresultvillagesattacked), $COLOR_GREEN)
-   SetLog("[Time/Attck]:" & Tab($minutesPerAttack,5) & $minutesPerAttack & "  [Srchs/Attck]:" & Tab($searchesPerAttack,4) & $searchesPerAttack & "  [Err/Attck]:" & Tab($errorsPerAttack,7) & $errorsPerAttack, $COLOR_GREEN)
-
+   SetLog("[Attck]:" & Tab($lblresultvillagesattacked,3) & GUICtrlRead($lblresultvillagesattacked) & "  [Gld-/Attck]:" & Tab($averageGoldSpentSearching,5) & $averageGoldSpentSearching & "  [Elx-/Attck]:" & Tab($averageElixirSpentOnTroops,5) & $averageElixirSpentOnTroops, $COLOR_GREEN)
+   SetLog("[Time/Attck]:" & Tab($minutesPerAttack,5) & $minutesPerAttack & "  [Srchs/Attck]:" & Tab($searchesPerAttack,4) & $searchesPerAttack & "  [Err/Attck]:" & Tab($errorsPerAttack,3) & $errorsPerAttack, $COLOR_GREEN)
    ; Clear search total now that is has been reported
    $SearchCountTotalBeforeAttack = 0
 
