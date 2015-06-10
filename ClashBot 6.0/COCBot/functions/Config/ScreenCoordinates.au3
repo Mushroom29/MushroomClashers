@@ -56,22 +56,29 @@ EndFunc
 
 Func IdentifyTroopKind($position)
    _CaptureRegion()
-   $TroopPixel = _GetPixelColor(68 + (72 * $position), 595)
-   ;SetLog("IdentifyTroopKind - Position: " & $position & " Color: " & $TroopPixel) ;Enable this line for debugging troops identification
-   If _ColorCheck($TroopPixel, Hex(0xF8B120, 6), 5) Then Return $eBarbarian ;Check if slot is Barbarian
-   If _ColorCheck($TroopPixel, Hex(0xD83F68, 6), 5) Then Return $eArcher ;Check if slot is Archer
-   If _ColorCheck($TroopPixel, Hex(0x7BC950, 6), 5) Then Return $eGoblin ;Check if slot is Goblin
-   If _ColorCheck($TroopPixel, Hex(0xF8D49E, 6), 5) Then Return $eGiant ;Check if slot is Giant
-   If _ColorCheck($TroopPixel, Hex(0x5FA2CE, 6), 5) Then Return $eWallbreaker ;Check if slot is Wallbreaker
-   If _ColorCheck(_GetPixelColor(68 + (72 * $position), 586), Hex(0x162038, 6), 5) Then Return $eMinion ;Check if slot is Minions
-   If _ColorCheck($TroopPixel, Hex(0x603B30, 6), 5) Then Return $eHog ;Check if slot is Hogs
-   If _ColorCheck($TroopPixel, Hex(0xB9645F, 6), 5) Then Return $eValkyrie ;Check if slot is Valkyries
-   If _ColorCheck($TroopPixel, Hex(0xF8EB79, 6), 5) Then Return $eKing ;Check if slot is King
-;   $OtherPixel = _GetPixelColor(68 + (72 * $position), 588)
-   If _ColorCheck(_GetPixelColor(68 + (72 * $position), 588), Hex(0x7031F0, 6), 5) Then Return $eQueen ;Check if slot is Queen
-   If _ColorCheck(_GetPixelColor(68 + (72 * $position), 588), Hex(0x7832F8, 6), 5) Then Return $eQueen ;Check if slot is Queen
-   If _ColorCheck(_GetPixelColor(68 + (72 * $position), 585), Hex(0x68ACD4, 6), 5) Then Return $eCastle ;Check if slot is Clan Castle
-   If _ColorCheck(_GetPixelColor(68 + (72 * $position), 624), Hex(0x0848ED, 6), 5) Then Return $eLSpell ;Check if slot is Lightning Spell
+   Local $troopPixel = _GetPixelColor(68 + (72 * $position), 595)
+   Local $minionPixel = _GetPixelColor(68 + (72 * $position), 586)
+   Local $queenPixel = _GetPixelColor(68 + (72 * $position), 588)
+   Local $clanPixel = _GetPixelColor(68 + (72 * $position), 585)
+   Local $lightningPixel = _GetPixelColor(68 + (72 * $position), 624)
+   SetLog("$troopPixel - Position: " & $position & " Color: " & $troopPixel) ;Enable this line for debugging troops identification
+   ;SetLog("$minionPixel - Position: " & $position & " Color: " & $minionPixel) ;Enable this line for debugging troops identification
+   ;SetLog("$queenPixel - Position: " & $position & " Color: " & $queenPixel) ;Enable this line for debugging troops identification
+   SetLog("$clanPixel - Position: " & $position & " Color: " & $clanPixel) ;Enable this line for debugging troops identification
+   ;SetLog("$lightningPixel - Position: " & $position & " Color: " & $lightningPixel) ;Enable this line for debugging troops identification
+   If _ColorCheck($troopPixel, Hex(0xF8B120, 6), 5) Then Return $eBarbarian ;Check if slot is Barbarian
+   If _ColorCheck($troopPixel, Hex(0xD83F68, 6), 5) Then Return $eArcher ;Check if slot is Archer
+   If _ColorCheck($troopPixel, Hex(0x7BC950, 6), 5) Then Return $eGoblin ;Check if slot is Goblin
+   If _ColorCheck($troopPixel, Hex(0xF8D49E, 6), 5) Then Return $eGiant ;Check if slot is Giant
+   If _ColorCheck($troopPixel, Hex(0x5FA2CE, 6), 5) Then Return $eWallbreaker ;Check if slot is Wallbreaker
+   If _ColorCheck($minionPixel, Hex(0x162038, 6), 5) Then Return $eMinion ;Check if slot is Minions
+   If _ColorCheck($troopPixel, Hex(0x603B30, 6), 5) Then Return $eHog ;Check if slot is Hogs
+   If _ColorCheck($troopPixel, Hex(0xB9645F, 6), 5) Then Return $eValkyrie ;Check if slot is Valkyries
+   If _ColorCheck($troopPixel, Hex(0xF8EB79, 6), 5) Then Return $eKing ;Check if slot is King
+   If _ColorCheck($queenPixel, Hex(0x7031F0, 6), 5) Then Return $eQueen ;Check if slot is Queen
+   If _ColorCheck($queenPixel, Hex(0x7832F8, 6), 5) Then Return $eQueen ;Check if slot is Queen
+   If _ColorCheck($clanPixel, Hex(0x68ACD4, 6), 5) Then Return $eCastle ;Check if slot is Clan Castle
+   If _ColorCheck($lightningPixel, Hex(0x0848ED, 6), 5) Then Return $eLSpell ;Check if slot is Lightning Spell
    Return -1
 EndFunc
 
