@@ -265,15 +265,9 @@ Func applyConfig() ;Applies the data from config to the controls in GUI
 	Switch $iUseStorage
 		Case 0
 			GUICtrlSetState($UseGold, $GUI_CHECKED)
-			GUICtrlSetState($UseElixir, $GUI_UNCHECKED)
-			GUICtrlSetState($UseGoldElix, $GUI_UNCHECKED)
 		Case 1
-			GUICtrlSetState($UseGold, $GUI_UNCHECKED)
 			GUICtrlSetState($UseElixir, $GUI_CHECKED)
-			GUICtrlSetState($UseGoldElix, $GUI_UNCHECKED)
 		Case 2
-			GUICtrlSetState($UseGold, $GUI_UNCHECKED)
-			GUICtrlSetState($UseElixir, $GUI_UNCHECKED)
 			GUICtrlSetState($UseGoldElix, $GUI_CHECKED)
 	EndSwitch
 
