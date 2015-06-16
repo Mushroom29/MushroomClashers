@@ -30,7 +30,6 @@ Func AttackReport() ;Return main screen
    Local $elixirStandardDeviation = "---"
    Local $darkElixirStandardDeviation = "---"
    Local $averageElixirSpentOnTroops = "---"
-   Local $lastElixerSpentOnTroops = "---"
 
    ; time variables
    Local $minutesOfRunningTime = ($min + ($hour * $MINUTES_PER_HOUR) + 1)
@@ -53,16 +52,14 @@ Func AttackReport() ;Return main screen
    Local $deployedWallbreakers = $AttackStartingWallbreakers - $AttackEndingWallbreakers
    Local $deployedLightningSpells = $AttackStartingLightningSpells - $AttackEndingLightningSpells
 
-   If (($THLevel >= 1 ) And ($THLevel <= 10)) Then
-	  ; Calculate the cost of troops deployed in last attack
-	  $lastElixerSpentOnTroops = (($deployedBarbarians * $BARRACKS_COST[$BARBARIAN_COST_ARRAY][$THLevel-1]) + _
-								  ($deployedArchers * $BARRACKS_COST[$ARCHER_COST_ARRAY][$THLevel-1]) + _
-								  ($deployedGiants * $BARRACKS_COST[$GIANT_COST_ARRAY][$THLevel-1]) + _
-								  ($deployedGoblins * $BARRACKS_COST[$GOBLIN_COST_ARRAY][$THLevel-1]) + _
-								  ($deployedWallbreakers * $BARRACKS_COST[$WALLBREAKER_COST_ARRAY][$THLevel-1]) + _
-								  ($deployedLightningSpells * $BARRACKS_COST[$LIGHTNING_SPELL_COST_ARRAY][$THLevel-1]))
-	  $TotalElixerSpentOnTroops += $lastElixerSpentOnTroops
-   EndIf
+   ; Calculate the cost of troops deployed in last attack
+   Local $lastElixerSpentOnTroops = (($deployedBarbarians * $BARRACKS_COST[$BARBARIAN_COST_ARRAY][$THLevel-1]) + _
+									 ($deployedArchers * $BARRACKS_COST[$ARCHER_COST_ARRAY][$THLevel-1]) + _
+									 ($deployedGiants * $BARRACKS_COST[$GIANT_COST_ARRAY][$THLevel-1]) + _
+									 ($deployedGoblins * $BARRACKS_COST[$GOBLIN_COST_ARRAY][$THLevel-1]) + _
+									 ($deployedWallbreakers * $BARRACKS_COST[$WALLBREAKER_COST_ARRAY][$THLevel-1]) + _
+									 ($deployedLightningSpells * $BARRACKS_COST[$LIGHTNING_SPELL_COST_ARRAY][$THLevel-1]))
+   $TotalElixerSpentOnTroops += $lastElixerSpentOnTroops
 
    ; Search cost for the last attack
    Local $lastGoldSpentSearching =  ($SearchCountTotalBeforeAttack * $SearchCost)
