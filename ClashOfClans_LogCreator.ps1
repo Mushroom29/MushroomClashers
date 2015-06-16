@@ -25,9 +25,7 @@ while($true)
         Add-Content $FullLogFile $FullData.substring($CharToOmit)
     }
 
-    $ResourceData = Get-Content $ClashBotLogFiles | where {
-        $_ -match "Resources: "
-        } | select -Last 100
+    $ResourceData = Get-Content $ClashBotLogFiles | where { $_ -match "Resources: " } | select -Last 100
     Clear-Content $ResourceLogFile
     if($ResourceData)
     {
@@ -37,11 +35,7 @@ while($true)
         Add-Content $ResourceLogFile $ResourceData.substring($CharToOmit)
     }
 
-    $MatchingData = Get-Content $ClashBotLogFiles | where {
-        $_ -match "\) \[G\]" -or
-        $_ -match "Searching Complete" -or
-        $_ -match "Last Raid"
-        } | select -Last 200
+    $MatchingData = Get-Content $ClashBotLogFiles | where { $_ -match "\) \[G\]" -or $_ -match "Searching Complete" -or $_ -match "Last Raid" } | select -Last 200
     Clear-Content $MatchingLogFile
     if($MatchingData)
     {
@@ -51,9 +45,7 @@ while($true)
         Add-Content $MatchingLogFile $MatchingData.substring($CharToOmit)
     }
 
-    $WallsData = Get-Content $ClashBotLogFiles | where {
-        $_ -match "Number of Walls Upgraded: "
-        } | select -Last 100
+    $WallsData = Get-Content $ClashBotLogFiles | where { $_ -match "Number of Walls Upgraded: " } | select -Last 100
     Clear-Content $WallsLogFile
     if($WallsData)
     {
@@ -63,23 +55,7 @@ while($true)
         Add-Content $WallsLogFile $WallsData.substring($CharToOmit)
     }
 
-    $AttackReportData = Get-Content $ClashBotLogFiles | where { 
-        $_ -match "=Last Attack=" -or
-        $_ -match "\[Gld\+\]:" -or
-        $_ -match "\[Elx\+\]:" -or
-        $_ -match "\[Dlx\+\]:" -or
-        $_ -match "\[Srchs\]:" -or
-        $_ -match "\[TrnT\]:" -or
-        $_ -match "=Troops Deployed=" -or
-        $_ -match "\[Barb\]:" -or
-        $_ -match "\[Gint\]:" -or
-        $_ -match "=Attack Report=" -or
-        $_ -match "\[Gld/H\]:" -or
-        $_ -match "\[Elx/H\]:" -or
-        $_ -match "\[Dlx/H\]:" -or
-        $_ -match "\[Attck\]:" -or
-        $_ -match "\[Time/Attck\]:"
-        } | select -Last 100
+    $AttackReportData = Get-Content $ClashBotLogFiles | where { $_ -match "=Attack Report=" -or  $_ -match "=Last Attack=" -or $_ -match "\[Gld\+\]:" -or $_ -match "\[Elx\+\]:" -or $_ -match "\[Dlx\+\]:" -or $_ -match "\[Srchs\]:" -or $_ -match "\[Gld/H\]:" -or $_ -match "\[Elx/H\]:" -or $_ -match "\[Dlx/H\]:" -or $_ -match "\[Attck\]:" -or $_ -match "\[Time/Attck\]:"  -or $_ -match "\[TrnT\]:" } | select -Last 100
     Clear-Content $AttackReportLogFile
     if($AttackReportData)
     {
